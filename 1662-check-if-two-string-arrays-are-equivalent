@@ -1,0 +1,21 @@
+/* https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/description/
+Given two string arrays word1 and word2, return true if the two arrays represent the same string, and false otherwise.
+
+A string is represented by an array if the array elements concatenated in order forms the string. */
+
+
+// тут не срабатывает последний тест в leetcode, потому что не учитывается, что элементов может быть больше, чем 2
+var arrayStringsAreEqual = function(word1, word2) {
+    if (word1[0] + word1[1] === word2[0] + word2[1]) {
+        return true;
+    }
+    return false
+};
+
+// это сделала со встроенным методом js
+var arrayStringsAreEqual = function(word1, word2) {
+    if (word1.join("") === word2.join("")) {
+        return true;
+    }
+    return false
+};
