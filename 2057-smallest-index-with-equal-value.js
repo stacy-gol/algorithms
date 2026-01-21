@@ -11,7 +11,7 @@ x mod y denotes the remainder when x is divided by y. */
 var smallestEqual = function(nums) {
     for(i = 0; i < nums.length; i++) {
         if (i%10 == nums[i]) {
-            return nums[i];
+            return i;
         }
     }
     return -1;
